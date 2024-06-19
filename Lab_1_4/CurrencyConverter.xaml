@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_253504_Patrebka_23.CurrencyConverter"
+             Title="CurrencyConverter">
+    <StackLayout Padding="20">
+                <Label Text="Валюта:" />
+                <Picker x:Name="currencyPicker"
+                SelectedIndexChanged="CurrencyPicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Российский рубль</x:String>
+                            <x:String>Евро</x:String>
+                            <x:String>Доллар США</x:String>
+                            <x:String>Швейцарский франк</x:String>
+                            <x:String>Китайский юань</x:String>
+                            <x:String>Фунт стерлингов</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            <Label Text=""
+                    FontSize="25"
+                    x:Name="rateLabel"/>
+            <Label Text="Дата:"/>
+            <DatePicker x:Name="datePicker"
+                        Format="D"
+                        DateSelected="DatePicker_DateSelected"/>
+            <Label Text="Количество:" />
+            <Entry x:Name="numberEntry"
+                Placeholder="Введите количество для конвертации"
+                Keyboard="Numeric" 
+                TextChanged="NumberEntry_TextChanged"/>
+            <Button Text="Рассчитать"
+                    WidthRequest="250"
+                    Clicked="CalculateButton_Clicked"/>
+            <Label x:Name="result"
+                FontSize="30"/>
+        </StackLayout>
+</ContentPage>

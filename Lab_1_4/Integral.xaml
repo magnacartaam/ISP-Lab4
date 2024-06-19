@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_253504_Patrebka_23.Integral"
+             Title="Integral">
+    <Grid RowDefinitions="2*,2*,*,2*"
+          ColumnDefinitions="*,*"
+          Padding="16"
+          RowSpacing="2">
+        <Label Text="Press Start to calculate"
+               x:Name="result"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               FontSize="24"
+               Margin="0,0,0,20"/>
+        <ProgressBar Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     Progress="0"
+                     x:Name="progress"
+                     Margin="20,0,0,20"/>
+        <Frame Grid.Row="2"
+               Grid.ColumnSpan="2"
+               WidthRequest="50"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Padding="5">
+            <Label Text="0%"
+                   FontSize="10"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   x:Name="information"/>
+        </Frame>
+        <Button Text="Start"
+                Grid.Row="3"
+                Grid.Column="0"
+                WidthRequest="120" 
+                Clicked ="OnClicked"
+                x:Name="StartButton"
+                Margin="0,0,0,20"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"/>
+        <Button Text="Cancel"
+                Grid.Row="3"
+                Grid.Column="1"
+                WidthRequest="120"
+                Clicked ="OnClicked"
+                x:Name="CancelButton"
+                Margin="0,0,0,20"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"/>
+    </Grid>
+</ContentPage>
